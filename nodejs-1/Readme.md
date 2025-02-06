@@ -19,3 +19,9 @@ npm init -y  # Creates a `package.json` file
 ```
 
 3. Create Server.js
+
+4. Run the server
+
+```
+node server.js
+```
