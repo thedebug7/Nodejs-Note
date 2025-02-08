@@ -48,3 +48,40 @@ app.get('/users/:userId', (req, res) => {
   res.send(`User ID: ${req.params.userId}`);
 });
 ```
+
+## Express Router
+
+1. Create a Router File `(routes/route.js)`
+
+```
+const express = require('express');
+const router = express.Router();
+
+```
+
+2.  Mount the Router in `server.js`
+
+```
+const userRoutes = require('./routes/users');
+app.use('/users', userRoutes); // Routes start with /users
+```
+
+## HTTP Status Code
+
+![](image/HTTP-Error-Codes.jpg)
+
+```
+200 OK: Successful GET/PUT requests.
+
+201 Created: Resource created successfully (POST).
+
+204 No Content: Successful DELETE (no response body).
+
+400 Bad Request: Invalid client input (e.g., missing data).
+
+401 Unauthorized: Authentication failed.
+
+404 Not Found: Resource doesn’t exist.
+
+500 Internal Server Error: Unexpected server error.
+```
